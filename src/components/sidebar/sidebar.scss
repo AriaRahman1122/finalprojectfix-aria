@@ -44,12 +44,12 @@
         cursor: pointer;
 
         &:hover {
-          background-color: rgb(200, 196, 196);
+          background-color: rgb(238, 236, 236);
         }
 
-        .Icon {
-          font-size: 10px;
-          color: rgb(140, 211, 235);
+        .icon {
+          font-size: 25px;
+          color: rgb(50, 163, 201);
         }
 
         span {
@@ -58,6 +58,31 @@
           color: rgb(95, 91, 91);
           margin-left: 10px;
         }
+      }
+    }
+  }
+
+  .bottom {
+    display: flex;
+    align-items: center;
+    margin: 10px;
+
+    .colorOption {
+      width: 20px;
+      height: 20px;
+      border-radius: 5px;
+      border: 1px solid rgb(50, 163, 201);
+      cursor: pointer;
+      margin: 5px;
+
+      &:nth-child(1) {
+        background-color: rgb(45, 43, 43);
+      }
+      &:nth-child(2) {
+        background-color: rgb(75, 174, 207);
+      }
+      &:nth-child(3) {
+        background-color: rgb(70, 88, 188);
       }
     }
   }
