@@ -1,6 +1,6 @@
 import Navbar from "../../components/navbar/Navbar";
 import Sidebar from "../../components/sidebar/Sidebar";
-import Widget from "../../components/widget/Widget";
+import Widget  from "../../components/widget/Widget ";
 import "./home.scss";
 
 const Home = () => {
@@ -11,10 +11,10 @@ const Home = () => {
         <Navbar/>
         <hr />
         <div className="widgets">
-          <Widget/>
-          <Widget/>
-          <Widget/>
-          <Widget/>
+          <Widget type="user"/>
+          <Widget type="order"/>
+          <Widget type="erarning"/>
+          <Widget type="balance"/>
         </div>
       </div>
     </div>
