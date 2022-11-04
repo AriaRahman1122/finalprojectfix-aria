@@ -7,6 +7,7 @@ import FullscreenExitOutlinedIcon from "@mui/icons-material/FullscreenExitOutlin
 import ChatBubbleOutlineOutlinedIcon from "@mui/icons-material/ChatBubbleOutlineOutlined";
 import ListOutlinedIcon from "@mui/icons-material/ListOutlined";
 
+import GProfile from "../../assets/gallery/5.png"
 
 const Navbar = () => {
   return (
@@ -25,19 +26,21 @@ const Navbar = () => {
             <NightlightRoundOutlinedIcon className="icon" />
           </div>
           <div className="item">
-            <NotificationsNoneOutlinedIcon className="icon" />
-          </div>
-          <div className="item">
             <FullscreenExitOutlinedIcon className="icon" />
           </div>
           <div className="item">
+            <NotificationsNoneOutlinedIcon className="icon" />
+            <div className="counter">1</div>
+          </div>
+          <div className="item">
             <ChatBubbleOutlineOutlinedIcon className="icon" />
+            <div className="counter">2</div>
           </div>
           <div className="item">
             <ListOutlinedIcon className="icon" />
           </div>
           <div className="item">
-            <img src="https://i0.wp.com/dianisa.com/wp-content/uploads/2022/08/7.-Gambar-Anime-HD-Keren.jpg?resize=1000%2C580&ssl=1" alt="profile admin"  className="avatar"/>
+            <img src={GProfile} alt="profile admin" className="avatar" />
           </div>
         </div>
       </div>
