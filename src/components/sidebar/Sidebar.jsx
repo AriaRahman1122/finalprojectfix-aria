@@ -22,7 +22,7 @@ const Sidebar = () => {
     <div className="sidebar">
       <div className="top">
         <Link to="/" style={{ textDecoration: "none" }}>
-          <span className="logo">Kuli-Coolly</span>
+          <span className="logo"><img src="../../assets/gallery/full150.png" alt="Kuli-Coolly" /></span>
         </Link>
       </div>
       <hr />
