@@ -8,6 +8,7 @@ import ChatBubbleOutlineOutlinedIcon from "@mui/icons-material/ChatBubbleOutline
 import ListOutlinedIcon from "@mui/icons-material/ListOutlined";
 import { DarkModeContext } from "../../context/darkModeContext";
 import { useContext } from "react";
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
   const { dispatch } = useContext(DarkModeContext);
@@ -17,7 +18,9 @@ const Navbar = () => {
       <div className="wrapper">
         <div className="search">
           <input type="text" placeholder="Search..." />
-          <SearchOutlinedIcon className="iconS"/>
+          <Link to="/" style={{ textDecoration: "none" }}>
+          <SearchOutlinedIcon className="icon"/>
+          </Link>
         </div>
         <div className="items">
           <div className="item">
@@ -34,11 +37,15 @@ const Navbar = () => {
             <FullscreenExitOutlinedIcon className="icon" />
           </div>
           <div className="item">
-            <NotificationsNoneOutlinedIcon className="icon" />
+          <Link to="/notif" style={{ textDecoration: "none" }}>
+            <NotificationsNoneOutlinedIcon className="icon"/>
+            </Link>
             <div className="counter">1</div>
           </div>
           <div className="item">
+          <Link to="/message" style={{ textDecoration: "none" }}>
             <ChatBubbleOutlineOutlinedIcon className="icon" />
+            </Link>
             <div className="counter">2</div>
           </div>
           <div className="item">

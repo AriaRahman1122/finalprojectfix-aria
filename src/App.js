@@ -3,12 +3,13 @@ import Login from "./pages/login/Login";
 import List from "./pages/list/List";
 import Single from "./pages/single/Single";
 import New from "./pages/new/New";
-import Notif from "./pages/notif/Notif"
+import Message from "./pages/message/Message"
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { productInputs, userInputs } from "./formSource";
 import "./style/dark.scss";
 import { useContext } from "react";
 import { DarkModeContext } from "./context/darkModeContext";
+import Notif from "./pages/notif/Notif";
 
 function App() {
   const { darkMode } = useContext(DarkModeContext);
@@ -38,6 +39,9 @@ function App() {
             </Route>
             <Route path="notif">
               <Route index element={<Notif />} />
+            </Route>
+            <Route path="message">
+              <Route index element={<Message />} />
             </Route>
           </Route>
         </Routes>

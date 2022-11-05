@@ -1,0 +1,41 @@
+.datanotif {
+    display: flex;
+    justify-content: space-between;
+    flex: 1;
+    padding: 10px;
+    border-radius: 10px;
+    height: 200px;
+  
+    .left,
+    .right {
+      display: flex;
+      flex-direction: column;
+  
+      .title {
+        font-weight: bold;
+        font-size: 40px;
+        color: rgb(0, 0, 0);
+        padding-bottom: 20px;
+      }
+  
+      .counter {
+        font-size: 20px;
+        font-weight: 300;
+      }
+  
+      .link {
+        width: max-content;
+        padding-top: 140px;
+        font-size: 15px;
+        border-bottom: 1px solid gray;
+        cursor: pointer;
+      }
+  
+      .icon {
+        font-size: 30px;
+        border-radius: 5px;
+        align-self: flex-end;
+      }
+    }
+  }
+  

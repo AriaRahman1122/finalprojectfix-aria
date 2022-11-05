@@ -19,12 +19,12 @@
       border: 0.5px solid lightgray;
       padding: 3px;
       border-radius: 10px;
-      width: 200px;
       position: relative;
 
       input {
         border: none;
         outline: none;
+        width: 300px;
         background: transparent;
 
         &::placeholder {
@@ -46,10 +46,6 @@
 
         .icon {
           font-size: 20px;
-        }
-
-        .iconS {
-          align-self: flex-end;
         }
 
         .avatar {

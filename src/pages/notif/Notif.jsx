@@ -1,18 +1,27 @@
-import "./notif.scss"
-import Sidebar from "../../components/sidebar/Sidebar"
-import Navbar from "../../components/navbar/Navbar"
-import Widget from "../../components/widget/Widget"
+import Sidebar from "../../components/sidebar/Sidebar";
+import Navbar from "../../components/navbar/Navbar";
+import "./notif.scss";
+import Datanotif from "../../components/Datanotif/Datanotif";
 
 const Notif = () => {
   return (
-    <div className="notif">
-      <Sidebar/>
-      <div className="listContainer">
-        <Navbar/>
-        <Widget/>
+    <div className="message">
+      <Sidebar />
+      <div className="messageContainer">
+        <Navbar />
+        <div className="chat">
+          <Datanotif type="user"/>
+        </div>
+        <div className="chat">
+          <Datanotif type="user"/>
+        </div>
+        <div className="chat">
+          <Datanotif type="user"/>
+        </div>
+        
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default Notif
+export default Notif;
