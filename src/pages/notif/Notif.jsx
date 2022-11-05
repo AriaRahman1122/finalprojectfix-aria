@@ -1,18 +1,18 @@
-import "./list.scss"
+import "./notif.scss"
 import Sidebar from "../../components/sidebar/Sidebar"
 import Navbar from "../../components/navbar/Navbar"
-import Datatable from "../../components/datatable/Datatable"
+import Widget from "../../components/widget/Widget"
 
-const List = () => {
+const Notif = () => {
   return (
-    <div className="list">
+    <div className="notif">
       <Sidebar/>
       <div className="listContainer">
         <Navbar/>
-        <Datatable/>
+        <Widget/>
       </div>
     </div>
   )
 }
 
-export default List
+export default Notif

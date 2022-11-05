@@ -1,60 +1,72 @@
 import "./sidebar.scss";
 import DashboardIcon from "@mui/icons-material/Dashboard";
-import PersonOutlinedIcon from "@mui/icons-material/PersonOutlined";
-import StoreOutlinedIcon from "@mui/icons-material/StoreOutlined";
-import CreditCardOutlinedIcon from "@mui/icons-material/CreditCardOutlined";
+import PersonOutlineIcon from "@mui/icons-material/PersonOutline";
 import LocalShippingIcon from "@mui/icons-material/LocalShipping";
-import AssessmentIcon from "@mui/icons-material/Assessment";
-import NotificationsNoneIcon from "@mui/icons-material/NotificationsNone";
-import LiveHelpOutlinedIcon from "@mui/icons-material/LiveHelpOutlined";
-import PsychologyOutlinedIcon from "@mui/icons-material/PsychologyOutlined";
-import SettingsSuggestOutlinedIcon from "@mui/icons-material/SettingsSuggestOutlined";
-import AssignmentIndOutlinedIcon from "@mui/icons-material/AssignmentIndOutlined";
+import CreditCardIcon from "@mui/icons-material/CreditCard";
+import StoreIcon from "@mui/icons-material/Store";
+import InsertChartIcon from "@mui/icons-material/InsertChart";
+import SettingsApplicationsIcon from "@mui/icons-material/SettingsApplications";
 import ExitToAppIcon from "@mui/icons-material/ExitToApp";
+import NotificationsNoneIcon from "@mui/icons-material/NotificationsNone";
+import SettingsSystemDaydreamOutlinedIcon from "@mui/icons-material/SettingsSystemDaydreamOutlined";
+import PsychologyOutlinedIcon from "@mui/icons-material/PsychologyOutlined";
+import AccountCircleOutlinedIcon from "@mui/icons-material/AccountCircleOutlined";
+import { Link } from "react-router-dom";
+import { DarkModeContext } from "../../context/darkModeContext";
+import { useContext } from "react";
 
 const Sidebar = () => {
+  const { dispatch } = useContext(DarkModeContext);
   return (
     <div className="sidebar">
       <div className="top">
-        <span className="logo">Kuli-Coolly</span>
+        <Link to="/" style={{ textDecoration: "none" }}>
+          <span className="logo">Kuli-Coolly</span>
+        </Link>
       </div>
       <hr />
       <div className="center">
         <ul>
           <p className="title">MAIN</p>
+          <Link to="/" style={{ textDecoration: "none" }}>
           <li>
             <DashboardIcon className="icon" />
             <span>Dashboard</span>
           </li>
-          <p className="title">LIST</p>
+          </Link>
+          <p className="title">LISTS</p>
+          <Link to="/users" style={{ textDecoration: "none" }}>
+            <li>
+              <PersonOutlineIcon className="icon" />
+              <span>Users</span>
+            </li>
+          </Link>
+          <Link to="/products" style={{ textDecoration: "none" }}>
+            <li>
+              <StoreIcon className="icon" />
+              <span>Products</span>
+            </li>
+          </Link>
           <li>
-            <PersonOutlinedIcon className="icon" />
-            <span>Users</span>
-          </li>
-          <p className="title">USEFULL</p>
-          <li>
-            <StoreOutlinedIcon className="icon" />
-            <span>Products</span>
-          </li>
-          <li>
-            <CreditCardOutlinedIcon className="icon" />
+            <CreditCardIcon className="icon" />
             <span>Orders</span>
           </li>
           <li>
             <LocalShippingIcon className="icon" />
             <span>Delivery</span>
           </li>
+          <p className="title">USEFUL</p>
           <li>
-            <AssessmentIcon className="icon" />
+            <InsertChartIcon className="icon" />
             <span>Stats</span>
           </li>
           <li>
             <NotificationsNoneIcon className="icon" />
-            <span>Notification</span>
+            <span>Notifications</span>
           </li>
           <p className="title">SERVICE</p>
           <li>
-            <LiveHelpOutlinedIcon className="icon" />
+            <SettingsSystemDaydreamOutlinedIcon className="icon" />
             <span>System Health</span>
           </li>
           <li>
@@ -62,12 +74,12 @@ const Sidebar = () => {
             <span>Logs</span>
           </li>
           <li>
-            <SettingsSuggestOutlinedIcon className="icon" />
-            <span>Setting</span>
+            <SettingsApplicationsIcon className="icon" />
+            <span>Settings</span>
           </li>
           <p className="title">USER</p>
           <li>
-            <AssignmentIndOutlinedIcon className="icon" />
+            <AccountCircleOutlinedIcon className="icon" />
             <span>Profile</span>
           </li>
           <li>
@@ -77,9 +89,14 @@ const Sidebar = () => {
         </ul>
       </div>
       <div className="bottom">
-        <div className="colorOption"></div>
-        <div className="colorOption"></div>
-        <div className="colorOption"></div>
+        <div
+          className="colorOption"
+          onClick={() => dispatch({ type: "LIGHT" })}
+        ></div>
+        <div
+          className="colorOption"
+          onClick={() => dispatch({ type: "DARK" })}
+        ></div>
       </div>
     </div>
   );

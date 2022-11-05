@@ -1,6 +1,6 @@
 .sidebar {
   flex: 1;
-  border-right: 0.5px solid lightgray;
+  border-right: 0.5px solid rgb(230, 227, 227);
   min-height: 100vh;
   background-color: white;
 
@@ -13,13 +13,13 @@
     .logo {
       font-size: 20px;
       font-weight: bold;
-      color: rgb(25, 109, 137);
+      color: #6439ff;
     }
   }
 
   hr {
     height: 0;
-    border: 0.5px solid lightgray;
+    border: 0.5px solid rgb(230, 227, 227);
   }
 
   .center {
@@ -27,63 +27,66 @@
 
     ul {
       list-style: none;
-      padding: 0;
       margin: 0;
+      padding: 0;
 
       .title {
         font-size: 10px;
         font-weight: bold;
-        color: gray;
+        color: #999;
         margin-top: 15px;
+        margin-bottom: 5px;
       }
 
       li {
         display: flex;
         align-items: center;
-        padding: 10px;
+        padding-left: 15px;
+        padding-bottom: 5px;
+        padding-top: 5px;
         cursor: pointer;
 
         &:hover {
-          background-color: rgb(238, 236, 236);
+          background-color: #ece8ff;
         }
 
         .icon {
-          font-size: 25px;
-          color: rgb(50, 163, 201);
+          font-size: 18px;
+          color: #7451f8;
         }
 
-        span {
-          font-size: 13px;
-          font-weight: 600;
-          color: rgb(95, 91, 91);
-          margin-left: 10px;
+        span{
+            font-size: 13px;
+            font-weight: 600;
+            color: #888;
+            margin-left: 10px;
         }
       }
     }
   }
 
-  .bottom {
-    display: flex;
-    align-items: center;
-    margin: 10px;
+  .bottom{
+      display: flex;
+      align-items: center;
+      margin: 10px;
 
-    .colorOption {
-      width: 20px;
-      height: 20px;
-      border-radius: 5px;
-      border: 1px solid rgb(50, 163, 201);
-      cursor: pointer;
-      margin: 5px;
+      .colorOption{
+          width: 20px;
+          height: 20px;
+          border-radius: 5px;
+          border: 1px solid #7451f8;
+          cursor: pointer;
+          margin: 5px;
 
-      &:nth-child(1) {
-        background-color: rgb(45, 43, 43);
+          &:nth-child(1){
+              background-color: whitesmoke;
+          }
+          &:nth-child(2){
+              background-color: #333;
+          }
+          &:nth-child(3){
+              background-color: darkblue;
+          }
       }
-      &:nth-child(2) {
-        background-color: rgb(75, 174, 207);
-      }
-      &:nth-child(3) {
-        background-color: rgb(70, 88, 188);
-      }
-    }
   }
 }

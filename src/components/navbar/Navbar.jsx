@@ -1,21 +1,23 @@
 import "./navbar.scss";
 import SearchOutlinedIcon from "@mui/icons-material/SearchOutlined";
 import LanguageOutlinedIcon from "@mui/icons-material/LanguageOutlined";
-import NightlightRoundOutlinedIcon from "@mui/icons-material/NightlightRoundOutlined";
-import NotificationsNoneOutlinedIcon from "@mui/icons-material/NotificationsNoneOutlined";
+import DarkModeOutlinedIcon from "@mui/icons-material/DarkModeOutlined";
 import FullscreenExitOutlinedIcon from "@mui/icons-material/FullscreenExitOutlined";
+import NotificationsNoneOutlinedIcon from "@mui/icons-material/NotificationsNoneOutlined";
 import ChatBubbleOutlineOutlinedIcon from "@mui/icons-material/ChatBubbleOutlineOutlined";
 import ListOutlinedIcon from "@mui/icons-material/ListOutlined";
-
-import GProfile from "../../assets/gallery/5.png"
+import { DarkModeContext } from "../../context/darkModeContext";
+import { useContext } from "react";
 
 const Navbar = () => {
+  const { dispatch } = useContext(DarkModeContext);
+
   return (
     <div className="navbar">
       <div className="wrapper">
         <div className="search">
-          <input type="text" placeholder="Search ..." />
-          <SearchOutlinedIcon />
+          <input type="text" placeholder="Search..." />
+          <SearchOutlinedIcon className="iconS"/>
         </div>
         <div className="items">
           <div className="item">
@@ -23,7 +25,10 @@ const Navbar = () => {
             English
           </div>
           <div className="item">
-            <NightlightRoundOutlinedIcon className="icon" />
+            <DarkModeOutlinedIcon
+              className="icon"
+              onClick={() => dispatch({ type: "TOGGLE" })}
+            />
           </div>
           <div className="item">
             <FullscreenExitOutlinedIcon className="icon" />
@@ -40,7 +45,11 @@ const Navbar = () => {
             <ListOutlinedIcon className="icon" />
           </div>
           <div className="item">
-            <img src={GProfile} alt="profile admin" className="avatar" />
+            <img
+              src="../../assets/gallery/5.png"
+              alt=""
+              className="avatar"
+            />
           </div>
         </div>
       </div>
