@@ -22,7 +22,7 @@ const Sidebar = () => {
     <div className="sidebar">
       <div className="top">
         <Link to="/" style={{ textDecoration: "none" }}>
-          <span className="logo"><img src="../../assets/gallery/full150.png" alt="Kuli-Coolly" /></span>
+          <span className="logo">Kuli-Coolly</span>
         </Link>
       </div>
       <hr />
@@ -91,10 +91,12 @@ const Sidebar = () => {
             <AccountCircleOutlinedIcon className="icon" />
             <span>Profile</span>
           </li>
+          <Link to="/login" style={{ textDecoration: "none" }}>
           <li>
             <ExitToAppIcon className="icon" />
             <span>Logout</span>
           </li>
+          </Link>
         </ul>
       </div>
       <div className="bottom">

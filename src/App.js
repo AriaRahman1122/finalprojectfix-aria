@@ -10,6 +10,7 @@ import "./style/dark.scss";
 import { useContext } from "react";
 import { DarkModeContext } from "./context/darkModeContext";
 import Notif from "./pages/notif/Notif";
+import SignUp from "./pages/signup/Signup";
 
 function App() {
   const { darkMode } = useContext(DarkModeContext);
@@ -42,6 +43,12 @@ function App() {
             </Route>
             <Route path="message">
               <Route index element={<Message />} />
+            </Route>
+            <Route path="login">
+              <Route index element={<Login />} />
+            </Route>
+            <Route path="signup">
+              <Route index element={<SignUp />} />
             </Route>
           </Route>
         </Routes>
